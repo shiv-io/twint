@@ -8,6 +8,5 @@ pysocks
 pandas>=0.23.0
 aiohttp_socks<=0.4.1
 schedule
-geopy
 fake-useragent
 googletransx
