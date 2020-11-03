@@ -2,7 +2,7 @@
 
 This is a fork of [twintproject/twint](https://github.com/twintproject/twint) which is focused on Elasticsearch compatibility, performance, and DeepCISO's specific needs. When in doubt, we tend to rip things out (ex. geolocation in tweets, geopy dependency), so this is not 100% compatible with twint upstream.
 
-We will not be supporting this in its current form. Issues requesting support will be closed without response.
+We will not be supporting this, and we assume anyone cloning/forking this repo is fully capable of supporting it on their own.
 
 ## Installing
 
