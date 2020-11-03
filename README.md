@@ -7,8 +7,8 @@ We will not be supporting this in its current form. Issues requesting support wi
 ## Installing
 
 ```bash
-git clone --depth=1 https://github.com/DeepCISO/elastwint.git
-cd elastwint
+git clone --depth=1 https://github.com/DeepCISO/twint.git
+cd twint
 pip3 install . -r requirements.txt
 ```
 
