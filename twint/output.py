@@ -116,7 +116,7 @@ def _output(obj, output, config, **extra):
 
     if config.Elasticsearch:
         logme.debug(__name__ + ':_output:Elasticsearch')
-        print("", end="-", flush=True)
+        #print("", end="-", flush=True)
     else:
         if not config.Hide_output:
             try:

@@ -186,14 +186,14 @@ def IndexWithRetries(actions, config):
             break
 
         except helpers.errors.BulkIndexError:
-            print("\n" + traceback.format_exc())
+            print(traceback.format_exc())
             #print("", end="F", flush=True)
             time.sleep(naptime)
             retries = retries + 5
         except:
             retries = retries + 1
             _es = False
-            print("\n" + traceback.format_exc())
+            print(traceback.format_exc())
             #print("", end="X", flush=True)
             time.sleep(naptime)
             naptime = round(naptime * 1.5)
