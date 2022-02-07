@@ -296,7 +296,7 @@ def tweets(conn, Tweet, config):
                     # DeepCISO is not a preservation project; losing some internal data (even where it impacts accuracy) is acceptable
                     # we just want the meeeeeeemes
                     # ref: https://github.com/twintproject/twint/issues/1343
-                    cursor.execute(query, (Tweet.id, 0, reply['username']))
+                    cursor.execute(query, (Tweet.id, 0, reply['screen_name']))
 
         conn.commit()
     except sqlite3.IntegrityError:
