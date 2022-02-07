@@ -290,7 +290,13 @@ def tweets(conn, Tweet, config):
         if Tweet.reply_to:
             for reply in Tweet.reply_to:
                 query = 'INSERT INTO replies VALUES(?,?,?)'
-                cursor.execute(query, (Tweet.id, int(reply['user_id']), reply['username']))
+                try:
+                    cursor.execute(query, (Tweet.id, int(reply['user_id']), reply['username']))
+                except:
+                    # DeepCISO is not a preservation project; losing some internal data (even where it impacts accuracy) is acceptable
+                    # we just want the meeeeeeemes
+                    # ref: https://github.com/twintproject/twint/issues/1343
+                    cursor.execute(query, (Tweet.id, 0, reply['username']))
 
         conn.commit()
     except sqlite3.IntegrityError:
